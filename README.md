@@ -1,0 +1,2 @@
+# pokemon-huergo-giuri
+aura
