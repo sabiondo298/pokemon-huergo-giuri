@@ -1,0 +1,230 @@
+[
+    {"id": 1, "nombre": "Bulbasaur", "tipo": "Planta", "poder": 100},
+    {"id": 2, "nombre": "Ivysaur", "tipo": "Planta", "poder": 220},
+    {"id": 3, "nombre": "Venusaur", "tipo": "Planta", "poder": 400},
+
+    {"id": 4, "nombre": "Charmander", "tipo": "Fuego", "poder": 100},
+    {"id": 5, "nombre": "Charmeleon", "tipo": "Fuego", "poder": 220},
+    {"id": 6, "nombre": "Charizard", "tipo": "Fuego", "poder": 400},
+
+    {"id": 7, "nombre": "Squirtle", "tipo": "Agua", "poder": 100},
+    {"id": 8, "nombre": "Wartortle", "tipo": "Agua", "poder": 220},
+    {"id": 9, "nombre": "Blastoise", "tipo": "Agua", "poder": 400},
+
+    {"id": 10, "nombre": "Caterpie", "tipo": "Bicho", "poder": 100},
+    {"id": 11, "nombre": "Metapod", "tipo": "Bicho", "poder": 220},
+    {"id": 12, "nombre": "Butterfree", "tipo": "Bicho", "poder": 360},
+
+    {"id": 13, "nombre": "Weedle", "tipo": "Bicho", "poder": 100},
+    {"id": 14, "nombre": "Kakuna", "tipo": "Bicho", "poder": 220},
+    {"id": 15, "nombre": "Beedrill", "tipo": "Bicho", "poder": 360},
+
+    {"id": 16, "nombre": "Pidgey", "tipo": "Normal", "poder": 100},
+    {"id": 17, "nombre": "Pidgeotto", "tipo": "Normal", "poder": 220},
+    {"id": 18, "nombre": "Pidgeot", "tipo": "Normal", "poder": 360},
+
+    {"id": 19, "nombre": "Rattata", "tipo": "Normal", "poder": 150},
+    {"id": 20, "nombre": "Raticate", "tipo": "Normal", "poder": 360},
+
+    {"id": 21, "nombre": "Spearow", "tipo": "Normal", "poder": 150},
+    {"id": 22, "nombre": "Fearow", "tipo": "Normal", "poder": 360},
+
+    {"id": 23, "nombre": "Ekans", "tipo": "Veneno", "poder": 150},
+    {"id": 24, "nombre": "Arbok", "tipo": "Veneno", "poder": 360},
+
+    {"id": 25, "nombre": "Pikachu", "tipo": "Electrico", "poder": 150},
+    {"id": 26, "nombre": "Raichu", "tipo": "Electrico", "poder": 360},
+
+    {"id": 27, "nombre": "Sandshrew", "tipo": "Tierra", "poder": 150},
+    {"id": 28, "nombre": "Sandslash", "tipo": "Tierra", "poder": 360},
+
+    {"id": 29, "nombre": "Nidoran♀", "tipo": "Veneno", "poder": 100},
+    {"id": 30, "nombre": "Nidorina", "tipo": "Veneno", "poder": 220},
+    {"id": 31, "nombre": "Nidoqueen", "tipo": "Veneno", "poder": 360},
+
+    {"id": 32, "nombre": "Nidoran♂", "tipo": "Veneno", "poder": 100},
+    {"id": 33, "nombre": "Nidorino", "tipo": "Veneno", "poder": 220},
+    {"id": 34, "nombre": "Nidoking", "tipo": "Veneno", "poder": 360},
+
+    {"id": 35, "nombre": "Clefairy", "tipo": "Hada", "poder": 150},
+    {"id": 36, "nombre": "Clefable", "tipo": "Hada", "poder": 360},
+
+    {"id": 37, "nombre": "Vulpix", "tipo": "Fuego", "poder": 150},
+    {"id": 38, "nombre": "Ninetales", "tipo": "Fuego", "poder": 360},
+
+    {"id": 39, "nombre": "Jigglypuff", "tipo": "Normal", "poder": 150},
+    {"id": 40, "nombre": "Wigglytuff", "tipo": "Normal", "poder": 360},
+
+    {"id": 41, "nombre": "Zubat", "tipo": "Veneno", "poder": 150},
+    {"id": 42, "nombre": "Golbat", "tipo": "Veneno", "poder": 360},
+
+    {"id": 43, "nombre": "Oddish", "tipo": "Planta", "poder": 100},
+    {"id": 44, "nombre": "Gloom", "tipo": "Planta", "poder": 220},
+    {"id": 45, "nombre": "Vileplume", "tipo": "Planta", "poder": 360},
+
+    {"id": 46, "nombre": "Paras", "tipo": "Bicho", "poder": 150},
+    {"id": 47, "nombre": "Parasect", "tipo": "Bicho", "poder": 360},
+
+    {"id": 48, "nombre": "Venonat", "tipo": "Bicho", "poder": 150},
+    {"id": 49, "nombre": "Venomoth", "tipo": "Bicho", "poder": 360},
+
+    {"id": 50, "nombre": "Diglett", "tipo": "Tierra", "poder": 150},
+    {"id": 51, "nombre": "Dugtrio", "tipo": "Tierra", "poder": 360},
+
+    {"id": 52, "nombre": "Meowth", "tipo": "Normal", "poder": 150},
+    {"id": 53, "nombre": "Persian", "tipo": "Normal", "poder": 360},
+
+    {"id": 54, "nombre": "Psyduck", "tipo": "Agua", "poder": 150},
+    {"id": 55, "nombre": "Golduck", "tipo": "Agua", "poder": 360},
+
+    {"id": 56, "nombre": "Mankey", "tipo": "Lucha", "poder": 150},
+    {"id": 57, "nombre": "Primeape", "tipo": "Lucha", "poder": 360},
+
+    {"id": 58, "nombre": "Growlithe", "tipo": "Fuego", "poder": 150},
+    {"id": 59, "nombre": "Arcanine", "tipo": "Fuego", "poder": 360},
+
+    {"id": 60, "nombre": "Poliwag", "tipo": "Agua", "poder": 100},
+    {"id": 61, "nombre": "Poliwhirl", "tipo": "Agua", "poder": 220},
+    {"id": 62, "nombre": "Poliwrath", "tipo": "Agua", "poder": 360},
+
+    {"id": 63, "nombre": "Abra", "tipo": "Psiquico", "poder": 100},
+    {"id": 64, "nombre": "Kadabra", "tipo": "Psiquico", "poder": 220},
+    {"id": 65, "nombre": "Alakazam", "tipo": "Psiquico", "poder": 360},
+
+    {"id": 66, "nombre": "Machop", "tipo": "Lucha", "poder": 100},
+    {"id": 67, "nombre": "Machoke", "tipo": "Lucha", "poder": 220},
+    {"id": 68, "nombre": "Machamp", "tipo": "Lucha", "poder": 360},
+
+    {"id": 69, "nombre": "Bellsprout", "tipo": "Planta", "poder": 100},
+    {"id": 70, "nombre": "Weepinbell", "tipo": "Planta", "poder": 220},
+    {"id": 71, "nombre": "Victreebel", "tipo": "Planta", "poder": 360},
+
+    {"id": 72, "nombre": "Tentacool", "tipo": "Agua", "poder": 150},
+    {"id": 73, "nombre": "Tentacruel", "tipo": "Agua", "poder": 360},
+
+    {"id": 74, "nombre": "Geodude", "tipo": "Roca", "poder": 100},
+    {"id": 75, "nombre": "Graveler", "tipo": "Roca", "poder": 220},
+    {"id": 76, "nombre": "Golem", "tipo": "Roca", "poder": 360},
+
+    {"id": 77, "nombre": "Ponyta", "tipo": "Fuego", "poder": 150},
+    {"id": 78, "nombre": "Rapidash", "tipo": "Fuego", "poder": 360},
+
+    {"id": 79, "nombre": "Slowpoke", "tipo": "Agua", "poder": 150},
+    {"id": 80, "nombre": "Slowbro", "tipo": "Agua", "poder": 360},
+
+    {"id": 81, "nombre": "Magnemite", "tipo": "Electrico", "poder": 150},
+    {"id": 82, "nombre": "Magneton", "tipo": "Electrico", "poder": 360},
+
+    {"id": 83, "nombre": "Farfetch'd", "tipo": "Normal", "poder": 370},
+
+    {"id": 84, "nombre": "Doduo", "tipo": "Normal", "poder": 150},
+    {"id": 85, "nombre": "Dodrio", "tipo": "Normal", "poder": 360},
+
+    {"id": 86, "nombre": "Seel", "tipo": "Agua", "poder": 150},
+    {"id": 87, "nombre": "Dewgong", "tipo": "Agua", "poder": 360},
+
+    {"id": 88, "nombre": "Grimer", "tipo": "Veneno", "poder": 150},
+    {"id": 89, "nombre": "Muk", "tipo": "Veneno", "poder": 360},
+
+    {"id": 90, "nombre": "Shellder", "tipo": "Agua", "poder": 150},
+    {"id": 91, "nombre": "Cloyster", "tipo": "Agua", "poder": 360},
+
+    {"id": 92, "nombre": "Gastly", "tipo": "Fantasma", "poder": 100},
+    {"id": 93, "nombre": "Haunter", "tipo": "Fantasma", "poder": 220},
+    {"id": 94, "nombre": "Gengar", "tipo": "Fantasma", "poder": 360},
+
+    {"id": 95, "nombre": "Onix", "tipo": "Roca", "poder": 370},
+
+    {"id": 96, "nombre": "Drowzee", "tipo": "Psiquico", "poder": 150},
+    {"id": 97, "nombre": "Hypno", "tipo": "Psiquico", "poder": 360},
+
+    {"id": 98, "nombre": "Krabby", "tipo": "Agua", "poder": 150},
+    {"id": 99, "nombre": "Kingler", "tipo": "Agua", "poder": 360},
+
+    {"id": 100, "nombre": "Voltorb", "tipo": "Electrico", "poder": 150},
+    {"id": 101, "nombre": "Electrode", "tipo": "Electrico", "poder": 360},
+
+    {"id": 102, "nombre": "Exeggcute", "tipo": "Planta", "poder": 150},
+    {"id": 103, "nombre": "Exeggutor", "tipo": "Planta", "poder": 360},
+
+    {"id": 104, "nombre": "Cubone", "tipo": "Tierra", "poder": 150},
+    {"id": 105, "nombre": "Marowak", "tipo": "Tierra", "poder": 360},
+
+    {"id": 106, "nombre": "Hitmonlee", "tipo": "Lucha", "poder": 370},
+    {"id": 107, "nombre": "Hitmonchan", "tipo": "Lucha", "poder": 370},
+
+    {"id": 108, "nombre": "Lickitung", "tipo": "Normal", "poder": 370},
+
+    {"id": 109, "nombre": "Koffing", "tipo": "Veneno", "poder": 150},
+    {"id": 110, "nombre": "Weezing", "tipo": "Veneno", "poder": 360},
+
+    {"id": 111, "nombre": "Rhyhorn", "tipo": "Tierra", "poder": 150},
+    {"id": 112, "nombre": "Rhydon", "tipo": "Tierra", "poder": 360},
+
+    {"id": 113, "nombre": "Chansey", "tipo": "Normal", "poder": 370},
+
+    {"id": 114, "nombre": "Tangela", "tipo": "Planta", "poder": 370},
+
+    {"id": 115, "nombre": "Kangaskhan", "tipo": "Normal", "poder": 370},
+
+    {"id": 116, "nombre": "Horsea", "tipo": "Agua", "poder": 150},
+    {"id": 117, "nombre": "Seadra", "tipo": "Agua", "poder": 360},
+
+    {"id": 118, "nombre": "Goldeen", "tipo": "Agua", "poder": 150},
+    {"id": 119, "nombre": "Seaking", "tipo": "Agua", "poder": 360},
+
+    {"id": 120, "nombre": "Staryu", "tipo": "Agua", "poder": 150},
+    {"id": 121, "nombre": "Starmie", "tipo": "Agua", "poder": 360},
+
+    {"id": 122, "nombre": "Mr. Mime", "tipo": "Psiquico", "poder": 370},
+
+    {"id": 123, "nombre": "Scyther", "tipo": "Bicho", "poder": 370},
+
+    {"id": 124, "nombre": "Jynx", "tipo": "Hielo", "poder": 370},
+
+    {"id": 125, "nombre": "Electabuzz", "tipo": "Electrico", "poder": 370},
+
+    {"id": 126, "nombre": "Magmar", "tipo": "Fuego", "poder": 370},
+
+    {"id": 127, "nombre": "Pinsir", "tipo": "Bicho", "poder": 370},
+
+    {"id": 128, "nombre": "Tauros", "tipo": "Normal", "poder": 370},
+
+    {"id": 129, "nombre": "Magikarp", "tipo": "Agua", "poder": 150},
+    {"id": 130, "nombre": "Gyarados", "tipo": "Agua", "poder": 360},
+
+    {"id": 131, "nombre": "Lapras", "tipo": "Agua", "poder": 370},
+
+    {"id": 132, "nombre": "Ditto", "tipo": "Normal", "poder": 200},
+
+    {"id": 133, "nombre": "Eevee", "tipo": "Normal", "poder": 220},
+
+    {"id": 134, "nombre": "Vaporeon", "tipo": "Agua", "poder": 360},
+    {"id": 135, "nombre": "Jolteon", "tipo": "Electrico", "poder": 360},
+    {"id": 136, "nombre": "Flareon", "tipo": "Fuego", "poder": 360},
+
+    {"id": 137, "nombre": "Porygon", "tipo": "Normal", "poder": 370},
+
+    {"id": 138, "nombre": "Omanyte", "tipo": "Roca", "poder": 150},
+    {"id": 139, "nombre": "Omastar", "tipo": "Roca", "poder": 360},
+
+    {"id": 140, "nombre": "Kabuto", "tipo": "Roca", "poder": 150},
+    {"id": 141, "nombre": "Kabutops", "tipo": "Roca", "poder": 360},
+
+    {"id": 142, "nombre": "Aerodactyl", "tipo": "Roca", "poder": 370},
+
+    {"id": 143, "nombre": "Snorlax", "tipo": "Normal", "poder": 370},
+
+    {"id": 144, "nombre": "Articuno", "tipo": "Hielo", "poder": 800},
+    {"id": 145, "nombre": "Zapdos", "tipo": "Electrico", "poder": 800},
+    {"id": 146, "nombre": "Moltres", "tipo": "Fuego", "poder": 800},
+
+    {"id": 147, "nombre": "Dratini", "tipo": "Dragon", "poder": 100},
+    {"id": 148, "nombre": "Dragonair", "tipo": "Dragon", "poder": 220},
+    {"id": 149, "nombre": "Dragonite", "tipo": "Dragon", "poder": 360},
+
+    {"id": 150, "nombre": "Mewtwo", "tipo": "Psiquico", "poder": 1000},
+
+    {"id": 151, "nombre": "Mew", "tipo": "Psiquico", "poder": 1000}
+
+]
