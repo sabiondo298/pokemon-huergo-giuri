@@ -5,3 +5,6 @@ class Pokemon:
         self.tipo=tipo
         self.poder=poder
 
+    def __repr__(self):
+        return (f"Pokemon(ID: {self.id}, nombre: {self.nombre}, tipo: {self.tipo}, poder: {self.poder})")
+
