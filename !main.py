@@ -6,9 +6,9 @@ import json
 
 
 def game():
-    from hash_table import cargar_pokemon_data, crear_pokemon_hash_table
-    from ver_medallas import hash_set
-    from ver_medallas import cargar_medallas, ver_medallas
+    from estructuras_de_datos import cargar_pokemon_data, crear_pokemon_hash_table
+    from estructuras_de_datos import hash_set
+    from estructuras_de_datos import cargar_medallas, ver_medallas
 
     pokemon_data = cargar_pokemon_data('pokemon_data.json')
     pokemon_table = crear_pokemon_hash_table(pokemon_data)
@@ -22,6 +22,7 @@ def game():
             os.system("cls")
             opcion = int(input("ingrese la opcion que desea hacer: \n 1. Buscar un pokemon por ID \n 2. Ver Medallas \n 3. Salir del juego \n"))
 
+#------------------Busqueda por id de pokemones-----------------#
 
             if opcion == 1:
                 pokemon_id = int(input("Ingrese el ID del Pokémon que desea buscar: "))
@@ -32,14 +33,16 @@ def game():
                     print("Pokémon no encontrado.")
                 input("Presiona Enter para continuar...: ")
 
+#------------------Ver medallas-----------------#
 
             elif opcion == 2:
-                medallas.add(medallas_data[0])
+                medallas.add(medallas_data[0]) #prueba
                 
                 print("Medallas obtenidas:")
                 medallas.mostrar()
                 input("Presiona Enter para continuar...: ")
 
+#------------------Salirse del juego-----------------#
 
             elif opcion == 3:
                 print("Saliendo del juego...")
