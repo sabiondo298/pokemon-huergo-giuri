@@ -2,7 +2,7 @@ import json
 
 from clase_pokemon import Pokemon
 
-class hash_table:
+class HashTable:
     def __init__(self):
         self.tabla = {}
 
@@ -36,7 +36,7 @@ def cargar_pokemon_data(file_path):
     return data
 
 def crear_pokemon_hash_table(pokemon_data):
-    pokemon_table = hash_table()
+    pokemon_table = HashTable()
     for pokemon in pokemon_data:
         pokemon_table.insert(pokemon['id'], Pokemon(pokemon['id'], pokemon['nombre'], pokemon['tipo'], pokemon['poder']))
     return pokemon_table
@@ -44,5 +44,6 @@ def crear_pokemon_hash_table(pokemon_data):
 if __name__ == "__main__":
     pokemon_data = cargar_pokemon_data('pokemon_data.json')
     pokemon_table = crear_pokemon_hash_table(pokemon_data)
+    pokemon_table.display()
     
     

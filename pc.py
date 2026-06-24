@@ -1,11 +1,11 @@
-class pc:
+class Pc:
     def __init__(self, head):
         self.head = head
 
     def add_pc(self, pokemon):
         nuevo = nodo(pokemon) 
-        if pc.head is None:
-            pc.head = nuevo
+        if Pc.head is None:
+            Pc.head = nuevo
         else:
             actual = self.head
 
