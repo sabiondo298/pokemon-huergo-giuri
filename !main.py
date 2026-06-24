@@ -24,19 +24,25 @@ def game():
     while True:
         try:
             os.system("cls")
-            opcion = int(input("ingrese la opcion que desea hacer: \n 1. Buscar un pokemon por ID \n 2. Ver Equipo \n 3. Ver Medallas \n 4. Salirse \n Opcion: "))
+            opcion = int(input("Ingrese la opcion que desea hacer:\n" "1. Ver Pokédex\n""2. Ver Equipo Principal\n""3. Ver PC\n""4. Capturar nuevo Pokémon\n""5. Ordenar PC\n""6. Buscar Pokémon en Equipo\n""7. Enviar Pokémon al Centro Pokémon\n""8. Transferir Pokémon al Profesor Oak\n""9. Deshacer última transferencia\n""10. Desafiar Líder de Gimnasio\n""11. Salir del sistema\n""Opción: "))
 
-#------------------Busqueda por id de pokemones-----------------#
+#------------------Menu pokedex-----------------#
 
             if opcion == 1:
                 os.system("cls")
-                pokemon_id = int(input("Ingrese el ID del Pokémon que desea buscar: "))
-                pokemon = pokemon_table.get(pokemon_id)
-                if pokemon:
-                    print(f"Pokémon encontrado: {pokemon}")
-                else:
-                    print("Pokémon no encontrado.")
-                input("Presiona Enter para continuar...: ")
+                pokedex_navegacion = int(input("Elige lo que quieres hacer: \n 1. Ver pokedex completa. \n 2. Buscar por ID a un pokemon.\n Opcion: "))
+                if pokedex_navegacion == 1:
+                    pokemon_table.display()
+                    input("Presione enter para continuar...")
+                
+                elif pokedex_navegacion == 2:    
+                    pokemon_id = int(input("Ingrese el ID del Pokémon que desea buscar: "))
+                    pokemon = pokemon_table.get(pokemon_id)
+                    if pokemon:
+                        print(f"Pokémon encontrado: {pokemon}")
+                    else:
+                        print("Pokémon no encontrado.")
+                    input("Presiona Enter para continuar...: ")
 
 #------------------Ver equipo-----------------#
 
@@ -58,7 +64,7 @@ def game():
 
 #------------------Salirse del juego-----------------#
 
-            elif opcion == 4:
+            elif opcion == 11:
                 os.system("cls")
                 print("Saliendo del juego...")
                 break
@@ -102,7 +108,7 @@ while True:
                     equipo_jugador.add(pokemon_inicial)
                     input("Presiona Enter para continuar...:")
 
-            game()
+            game() # se inicia el main game despues de elegir al inicial
             break
         elif opcion == 2:
             print("Saliendo del juego...")
