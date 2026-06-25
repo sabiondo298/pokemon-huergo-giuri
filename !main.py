@@ -18,6 +18,7 @@ equipo_jugador = Equipo(6)
 centropokemon = CentroPokemon(None)
 
 
+
  
 #------------------Juego principal-----------------------#
 
@@ -69,12 +70,18 @@ def game():
                 os.system("cls")
                 print("Pokemones disponibles para atrapar:\n" 
                 "(Nos basamos en el poder total de tu equipo para determinar los pokemones que podes atrapar)")
-                poder_total = sum(pokemon.poder for pokemon in equipo_jugador)
-                print(f"Tu poder total es: {poder_total}, y los pokemones disponibles segun tu poder son:")
-                for pokemon in pokemon_table.values():
-                    if pokemon.poder <= poder_total:
-                        print(pokemon)
-                        input("Presione Enter para continuar...: ")
+                for pokemon in equipo_jugador:
+                    tabla_poder = []
+                    tabla_poder.append(pokemon.poder)
+                    poder_total = sum(tabla_poder)
+                    for i, bucket in enumerate(pokemon_table.tabla):
+                        for pokemon in bucket:
+                            if pokemon[1].poder <= poder_total: 
+                                print(bucket)
+
+
+                    
+                    input("Presione Enter para continuar...: ")
 #------------------Centro pokemon-----------------#
 
             elif opcion == 7:
@@ -169,3 +176,5 @@ while True:
 
 
     
+
+

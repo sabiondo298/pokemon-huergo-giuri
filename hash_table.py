@@ -4,42 +4,33 @@ from clase_pokemon import Pokemon
 
 class HashTable:
     def __init__(self):
-        self.tabla = {}
+        self.tabla = [[] for _ in range(152)]
 
     def funcion_hash(self, llave):
-        return hash(llave) % 151 # numero de buckets en mi hash map
+        return llave % 152 
 
-    def insert(self, llave, value):
-        index = self.funcion_hash(llave)    # hashea la llave para obtener el indice del bucket
-        if index not in self.tabla:
-            self.tabla[index] = []                  # esto le asigna una lista vacia al indice del bucket si no existe
-        self.tabla[index].append((llave, value))    # y despues le agrega un valor a esa lista 
+    def insert(self, llave, valor):
+        indice = self.funcion_hash(llave)
+        self.tabla[indice].append([llave, valor])
 
     def get(self, llave):
-        index = self.funcion_hash(llave) # hashea la llave para obtener el indice del bucket
-        entries = self.tabla.get(index)
-        if not entries:
-            return None # si no hay entradas en ese bucket, devuelve None
-        for k, v in entries:    # recorre las entradas en ese bucket para encontrar la llave y devolver su valor
-            if k == llave:      # si la llave es igual al valor que estamos buscando, devuelve el valor asociado a esa llave
-                return v
+        indice = self.funcion_hash(llave)
+
+        for elemento in self.tabla[indice]:
+            if elemento[0] == llave:
+                return elemento[1]
+
         return None
 
 
     def display(self):
-        for llave, value in self.tabla.items():
-            print(f"{llave}: {value}")
+        for pokemon in self.tabla:
+            print(f"{pokemon}")
 
-    def values(self):
-        resultados = []
-        for entries in self.tabla.values():
-            for _, value in entries:
-                resultados.append(value)
-        return resultados
 
 
 def cargar_pokemon_data(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding="utf-8") as file:
         data = json.load(file)
     return data
 

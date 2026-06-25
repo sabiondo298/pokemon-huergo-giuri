@@ -44,7 +44,7 @@
 
     {"id": 32, "nombre": "Nidoran♂", "tipo": "Veneno", "poder": 100},
     {"id": 33, "nombre": "Nidorino", "tipo": "Veneno", "poder": 220},
-    {"id": 34, "nombre": "Nidoking", "tipo": "Veneno", "poder": 360},
+    {"id": 34, "nombre": "Nidoking", "tipo": "Veneno", "poder": 380},
 
     {"id": 35, "nombre": "Clefairy", "tipo": "Hada", "poder": 150},
     {"id": 36, "nombre": "Clefable", "tipo": "Hada", "poder": 360},
