@@ -1,13 +1,13 @@
 [
-    {"id": 1, "nombre": "Bulbasaur", "tipo": "Planta", "poder": 100},
+    {"id": 1, "nombre": "Bulbasaur", "tipo": "Planta", "poder": 130},
     {"id": 2, "nombre": "Ivysaur", "tipo": "Planta", "poder": 220},
     {"id": 3, "nombre": "Venusaur", "tipo": "Planta", "poder": 400},
 
-    {"id": 4, "nombre": "Charmander", "tipo": "Fuego", "poder": 100},
+    {"id": 4, "nombre": "Charmander", "tipo": "Fuego", "poder": 150},
     {"id": 5, "nombre": "Charmeleon", "tipo": "Fuego", "poder": 220},
     {"id": 6, "nombre": "Charizard", "tipo": "Fuego", "poder": 400},
 
-    {"id": 7, "nombre": "Squirtle", "tipo": "Agua", "poder": 100},
+    {"id": 7, "nombre": "Squirtle", "tipo": "Agua", "poder": 130},
     {"id": 8, "nombre": "Wartortle", "tipo": "Agua", "poder": 220},
     {"id": 9, "nombre": "Blastoise", "tipo": "Agua", "poder": 400},
 

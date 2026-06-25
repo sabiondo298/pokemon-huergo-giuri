@@ -4,8 +4,6 @@ def cargar_medallas(file_path):
         data = json.load(file)
     return data
 
-
-
 class hash_set():
     def __init__(self):
         self.tabla = []
@@ -16,7 +14,6 @@ class hash_set():
 
     def mostrar(self):
         print(self.tabla)
-
 
 def ver_medallas():
     medallas = cargar_medallas('medallas.json')

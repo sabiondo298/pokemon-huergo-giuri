@@ -30,6 +30,14 @@ class HashTable:
         for llave, value in self.tabla.items():
             print(f"{llave}: {value}")
 
+    def values(self):
+        resultados = []
+        for entries in self.tabla.values():
+            for _, value in entries:
+                resultados.append(value)
+        return resultados
+
+
 def cargar_pokemon_data(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)

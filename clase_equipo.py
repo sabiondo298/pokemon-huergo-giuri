@@ -11,6 +11,9 @@ class Equipo:
         else:
             print("El equipo ya está lleno. El pokemon atrapado ira a la PC, la puedes acceder desde el menu.")
 
+    def __iter__(self):
+        return iter(self.pokemones) # lo uso para poder iterar en el equipo del juador
+
     def display(self):
         print(f"Equipo: {self.pokemones}")
 
