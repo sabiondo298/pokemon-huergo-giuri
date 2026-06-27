@@ -4,7 +4,7 @@ import os
 import json
 from hash_table import cargar_pokemon_data, crear_pokemon_hash_table
 from ver_medallas import hash_set, cargar_medallas
-from clase_pc import Pc
+from clase_pc import PC
 from clase_equipo import Equipo
 from clase_CentroPokemon import CentroPokemon
 
@@ -16,7 +16,7 @@ medallas_data = cargar_medallas('medallas.json')
 medallas = hash_set()
 equipo_jugador = Equipo(6)
 centropokemon = CentroPokemon(None)
-
+pc_jugador = PC(None)
 
 
  
@@ -64,24 +64,53 @@ def game():
                 equipo_jugador.display()
                 input("Presione enter para continuar... ")
 
+#------------------Ver PC-----------------#
+
+            elif opcion == 3:
+                os.system("cls")
+                pc_jugador.display()
+                input("Presione enter para continuar... ")
+
+
 #------------------Capturar pokemones-----------------#
 
             elif opcion == 4:
                 os.system("cls")
                 print("Pokemones disponibles para atrapar:\n" 
                 "(Nos basamos en el poder total de tu equipo para determinar los pokemones que podes atrapar)")
-                for pokemon in equipo_jugador:
-                    tabla_poder = []
+                pokemon_abilitados = []
+                tabla_poder = []
+                for pokemon in equipo_jugador:                    
                     tabla_poder.append(pokemon.poder)
-                    poder_total = sum(tabla_poder)
-                    for i, bucket in enumerate(pokemon_table.tabla):
-                        for pokemon in bucket:
-                            if pokemon[1].poder <= poder_total: 
-                                print(bucket)
+                poder_total = sum(tabla_poder)
+                print(f"El poder total de tu equipo es: {poder_total}")
+                for i, bucket in enumerate(pokemon_table.tabla):
+                    for pokemon in bucket:
+                        if pokemon[1].poder <= poder_total:                                
+                            pokemon_abilitados.append(pokemon[1])
+                            print(bucket)                                
+                try:
+                    while True:
+                        eleccion_pokemon_atrapar = int(input("Ingrese el ID del Pokémon que desea atrapar: "))
+                        if pokemon_table.get(eleccion_pokemon_atrapar) in pokemon_abilitados:
+                            pokemon_atrapado = pokemon_table.get(eleccion_pokemon_atrapar)
+                            equipo_jugador.add(pokemon_atrapado)
+                            if len(equipo_jugador.pokemones) == 6:
+                                pc_jugador.add_pc(pokemon_atrapado)
+                                print(f"¡Has atrapado a {pokemon_atrapado.nombre}! Tu equipo está lleno, por lo que el Pokémon atrapado ha sido enviado a la PC.")
+                                input("Presione Enter para continuar...: ")
+                                break
+                            else:
+                                print(f"¡Has atrapado a {pokemon_atrapado.nombre}!")
+                                input("Presione Enter para continuar...: ")
+                                break
+                        elif eleccion_pokemon_atrapar not in pokemon_abilitados:
+                            print("El Pokémon que ingresaste no está disponible para atrapar. Por favor, elige un Pokémon de la lista.")
+                            input("Presione Enter para continuar...: ")
+                except ValueError:
+                    print("Entrada no válida. Por favor, ingrese un número.")
 
-
-                    
-                    input("Presione Enter para continuar...: ")
+              
 #------------------Centro pokemon-----------------#
 
             elif opcion == 7:

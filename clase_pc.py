@@ -1,4 +1,4 @@
-class Pc:
+class PC:
     def __init__(self, head=None):
         self.head = head
 
@@ -15,7 +15,6 @@ class Pc:
     def display(self):
         if self.head is None: #si esta vacia returnea eso
             print("PC vacío")
-            input("Presione Enter para continuar...: ")
             return
 
         actual = self.head

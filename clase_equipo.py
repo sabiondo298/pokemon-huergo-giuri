@@ -15,6 +15,8 @@ class Equipo:
         return iter(self.pokemones) # lo uso para poder iterar en el equipo del juador
 
     def display(self):
-        print(f"Equipo: {self.pokemones}")
+            print("Equipo:")
+            for i, pokemon in enumerate(self.pokemones, start=1):
+                print(f"{i}. {pokemon}")
 
 
