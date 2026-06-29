@@ -17,6 +17,7 @@ medallas = hash_set()
 equipo_jugador = Equipo(6)
 centropokemon = CentroPokemon(None)
 pc_jugador = PC(None)
+pc_oak = []
 
 
  
@@ -149,7 +150,8 @@ def game():
 #------------------Transferencia oak-----------------#
 
             elif opcion == 8:
-                pass
+                
+                
                 
 
 #------------------Ver medallas-----------------#
