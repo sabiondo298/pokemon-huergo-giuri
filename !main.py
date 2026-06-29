@@ -110,19 +110,35 @@ def game():
                 except ValueError:
                     print("Entrada no válida. Por favor, ingrese un número.")
 
+#------------------Ordenar PC-----------------#
               
+            elif opcion == 5:
+                os.system("cls")
+                try:
+                    opcion_ordenar = int(input("Elige como queres ordenar tu PC: \n1. Alfabeticamente \nOpcion: "))
+                    if opcion_ordenar == 1:
+                        pc_jugador.ordenar_alf()
+                        print("La PC fue ordenada alfabéticamente.")
+                    elif opcion_ordenar == 2:
+                        print("La ordenación por poder aún no está implementada.")
+                    else:
+                        print("Opción no válida.")
+                except ValueError:
+                    print("Entrada no válida. Por favor, ingrese un número.")
+                input("Presione Enter para continuar...: ")
+
 #------------------Centro pokemon-----------------#
 
             elif opcion == 7:
                 os.system("cls")
                 while True:
                     try:
-                        centro_eleccion = int(input("Elegi el metodo de curacion: \n1. Curar todo el equipo. \n2. Curar solo uno. \nOpcion: "))
+                        centro_eleccion = int(input("Elegi el metodo de curacion: \n1. Curar todo el equipo. \nOpcion: "))
                         if centro_eleccion == 1:
                             for pokemon in equipo_jugador: # se iteran en los pokemones del usuario FIFO
                                 centropokemon.curar(pokemon)
                                 input("Presione Enter para continuar...: ")
-                                break
+                            break
                         elif centro_eleccion == 2:
                             pass
                     except ValueError:
@@ -130,7 +146,7 @@ def game():
                         print("Entrada no válida. Por favor, ingrese un número.")
                         input("Presiona Enter para continuar...: ")
 
-#------------------Centro pokemon-----------------#
+#------------------Transferencia oak-----------------#
 
             elif opcion == 8:
                 pass

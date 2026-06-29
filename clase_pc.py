@@ -25,6 +25,24 @@ class PC:
             actual = actual.next
             indice += 1
 
+    def ordenar_alf(self):
+        if self.head is None or self.head.next is None:
+            return
+
+        cambio = True
+
+        while cambio:
+            cambio = False
+            actual = self.head
+
+            while actual.next is not None:
+                if actual.pokemon.nombre.lower() > actual.next.pokemon.nombre.lower():
+                    # Intercambiar los Pokémon
+                    actual.pokemon, actual.next.pokemon = actual.next.pokemon, actual.pokemon
+                    cambio = True
+
+                actual = actual.next
+
 
 class nodo:
     def __init__(self, pokemon):
