@@ -21,7 +21,7 @@ class PC:
         indice = 1
         while actual is not None:
             nombre = getattr(actual.pokemon, "nombre")
-            print(f"{indice}. {nombre}")
+            print(f"{indice}. {actual.pokemon.id} {nombre}")
             actual = actual.next
             indice += 1
 
@@ -43,7 +43,23 @@ class PC:
 
                 actual = actual.next
 
+    def remove_pokemon(self, id):
+        if self.head is None:
+            return False
 
+        if self.head.pokemon.id == id:
+            self.head = self.head.next
+            return True
+
+        actual = self.head
+        while actual.next is not None:
+            if actual.next.pokemon.id == id:
+                actual.next = actual.next.next
+                return True
+            actual = actual.next
+
+        return False
+    
 class nodo:
     def __init__(self, pokemon):
         self.pokemon = pokemon # seria la data pero con otro nombre

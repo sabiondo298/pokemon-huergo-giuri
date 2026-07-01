@@ -63,6 +63,8 @@ def game():
             elif opcion == 2:
                 os.system("cls")
                 equipo_jugador.display()
+                poder_total = sum(pokemon.poder for pokemon in equipo_jugador)
+                print(f"Poder total del equipo: {poder_total}")
                 input("Presione enter para continuar... ")
 
 #------------------Ver PC-----------------#
@@ -150,16 +152,155 @@ def game():
 #------------------Transferencia oak-----------------#
 
             elif opcion == 8:
-                
-                
-                
+                os.system("cls")
+                if len(equipo_jugador.pokemones) == 1:
+                    print("No puedes transferir tu último Pokémon. Debes tener al menos un Pokémon en tu equipo.")
+                    input("Presiona Enter para continuar...: ")
+                    continue
+                print("Elige un pokemon de tu pc para transferir al Profesor Oak: ")
+                PC.display(self=pc_jugador)
+                while True:
+                    try:
+                        pokemon_elegido = int(input("Ingrese el ID del numerico del pokemon que desea transferir: "))
+                        pokemon_transferido = pokemon_table.get(pokemon_elegido)
+                        if pokemon_transferido:
+                            pc_oak.append(pokemon_transferido)
+                            pc_jugador.remove_pokemon(pokemon_elegido)
+                            print(f"Has transferido a {pokemon_transferido.nombre} al Profesor Oak.")
+                            input("Presiona Enter para continuar...: ")
+                            break
+                        break
+                    except ValueError:
+                        print("Entrada no válida. Por favor, ingrese un número.")
 
+#------------------Deshacer transferencia-----------------#
+
+            elif opcion == 9:
+                os.system("cls")
+                if pc_oak:
+                    pokemon_devuelto = pc_oak.pop()
+                    pc_jugador.add_pc(pokemon_devuelto)
+                    print(f"Has devuelto a {pokemon_devuelto.nombre} del Profesor Oak a tu PC.")
+                else:
+                    print("No hay Pokémon para devolver del Profesor Oak.")
+                input("Presiona Enter para continuar...: ")
+
+#------------------Gimnasios-----------------#
+
+            elif opcion == 10:
+                os.system("cls")
+                try:
+                    while True:
+                        if len(medallas.tabla) == 0:
+                            print("1. Tu proximo gimnasio es de tipo roca: Brock 💎 (400 PC Recomendado" )
+                            aux_gym = int(input("Desea combatir con el lider de gimnasio? \n1. Si \n2. No \nOpcion: "))
+                            if aux_gym == 1:
+                                tabla_poder = []
+                                for pokemon in equipo_jugador:                    
+                                    tabla_poder.append(pokemon.poder)
+                                    poder_total = sum(tabla_poder)
+                                if poder_total >= 400:
+                                    print("¡Felicidades! Has derrotado a Brock y obtenido la medalla de roca.")
+                                    medallas.add("Medalla Roca")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                                else:
+                                    print("Has perdido. Tu equipo no tiene suficiente poder para derrotar a Brock.")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                            elif aux_gym == 2:
+                                break
+                
+                        if len(medallas.tabla) == 1:
+                            print("1. Tu proximo gimnasio es de tipo roca: Misty 💧 (650 PC Recomendado" )
+                            aux_gym = int(input("Desea combatir con el lider de gimnasio? \n1. Si \n2. No \nOpcion: "))
+                            if aux_gym == 1:
+                                tabla_poder = []
+                                for pokemon in equipo_jugador:                    
+                                    tabla_poder.append(pokemon.poder)
+                                    poder_total = sum(tabla_poder)
+                                if poder_total >= 650:
+                                    print("¡Felicidades! Has derrotado a Misty y obtenido la medalla de roca.")
+                                    medallas.add("Medalla Cascada")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                                else:
+                                    print("Has perdido. Tu equipo no tiene suficiente poder para derrotar a Misty.")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                            elif aux_gym == 2:
+                                break
+
+                        if len(medallas.tabla) == 2:
+                            print("1. Tu proximo gimnasio es de tipo roca: Lt. Surge ⚡ (950 PC Recomendado" )
+                            aux_gym = int(input("Desea combatir con el lider de gimnasio? \n1. Si \n2. No \nOpcion: "))
+                            if aux_gym == 1:
+                                tabla_poder = []
+                                for pokemon in equipo_jugador:                    
+                                    tabla_poder.append(pokemon.poder)
+                                    poder_total = sum(tabla_poder)
+                                if poder_total >= 950:
+                                    print("¡Felicidades! Has derrotado a Lt. Surge ⚡ y obtenido la medalla de roca.")
+                                    medallas.add("Medalla Trueno")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                                else:
+                                    print("Has perdido. Tu equipo no tiene suficiente poder para derrotar a Lt. Surge.")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                            elif aux_gym == 2:
+                                break
+                
+                        if len(medallas.tabla) == 3:
+                            print("1. Tu proximo gimnasio es de tipo roca: Erika  (950 PC Recomendado" )
+                            aux_gym = int(input("Desea combatir con el lider de gimnasio? \n1. Si \n2. No \nOpcion: "))
+                            if aux_gym == 1:
+                                tabla_poder = []
+                                for pokemon in equipo_jugador:                    
+                                    tabla_poder.append(pokemon.poder)
+                                    poder_total = sum(tabla_poder)
+                                if poder_total >= 950:
+                                    print("¡Felicidades! Has derrotado a Erika 🌿 y obtenido la medalla de roca.")
+                                    medallas.add_medalla("Medalla Arcoiris")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                                else:
+                                    print("Has perdido. Tu equipo no tiene suficiente poder para derrotar a Erika.")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                            elif aux_gym == 2:
+                                break
+
+                        if len(medallas.tabla) == 4:
+                            print("1. Tu proximo gimnasio es de tipo roca: Koga  (1350 PC Recomendado" )
+                            aux_gym = int(input("Desea combatir con el lider de gimnasio? \n1. Si \n2. No \nOpcion: "))
+                            if aux_gym == 1:
+                                tabla_poder = []
+                                for pokemon in equipo_jugador:                    
+                                    tabla_poder.append(pokemon.poder)
+                                    poder_total = sum(tabla_poder)
+                                if poder_total >= 1350:
+                                    print("¡Felicidades! Has derrotado a Koga ☠️ y obtenido la medalla de roca.")
+                                    medallas.add("Medalla Alma")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                                else:
+                                    print("Has perdido. Tu equipo no tiene suficiente poder para derrotar a Koga.")
+                                    input("Presiona Enter para continuar...: ")
+                                    break
+                            elif aux_gym == 2:
+                                break
+                except ValueError:
+                    os.system("cls")
+                    print("Entrada no válida. Por favor, ingrese un número.")
+                    input("Presiona Enter para continuar...: ")
+
+
+                
 #------------------Ver medallas-----------------#
 
             elif opcion == 11:
                 os.system("cls")
-                medallas.add(medallas_data[0]) #prueba
-                
                 print("Medallas obtenidas:")
                 medallas.mostrar()
                 input("Presiona Enter para continuar...: ")
@@ -176,6 +317,7 @@ def game():
             input("Presiona Enter para continuar...: ")
 
 
+#------------------Eleccion de inicial-----------------#
 
 while True:
 
